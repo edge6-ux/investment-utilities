@@ -35,9 +35,11 @@ export default function WhyUs() {
     <section
       id="why"
       aria-label="Why Choose Us"
+      className="resp-pad"
       style={{ background: "var(--off-white)", padding: "6rem 8%" }}
     >
       <div
+        className="resp-2col-gap"
         style={{
           maxWidth: "1300px",
           margin: "0 auto",
@@ -46,7 +48,6 @@ export default function WhyUs() {
           gap: "5rem",
           alignItems: "start",
         }}
-        className="flex-col lg:grid"
       >
         {/* Left — numbered list */}
         <div>

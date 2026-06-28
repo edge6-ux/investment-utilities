@@ -14,14 +14,14 @@ export default function Story() {
     <section
       id="story"
       aria-label="Our story"
+      className="resp-2col"
       style={{
         display: "grid",
         gridTemplateColumns: "1fr 1fr",
       }}
-      className="flex-col lg:grid"
     >
       {/* Left — text */}
-      <div style={{ padding: "6rem 8%", background: "var(--white)" }}>
+      <div className="resp-pad" style={{ padding: "6rem 8%", background: "var(--white)" }}>
         <div
           style={{
             fontFamily: "var(--font-barlow-condensed), sans-serif",
@@ -72,6 +72,7 @@ export default function Story() {
 
       {/* Right — dark panel */}
       <div
+        className="resp-pad"
         style={{
           background: "var(--black-nav)",
           borderTop: "4px solid var(--green)",

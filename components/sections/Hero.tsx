@@ -7,6 +7,7 @@ export default function Hero() {
     <section
       id="home"
       aria-label="Hero"
+      className="resp-hero"
       style={{
         height: "calc(100vh - 230px)",
         display: "flex",

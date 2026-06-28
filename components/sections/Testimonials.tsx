@@ -24,6 +24,7 @@ export default function Testimonials() {
     <section
       id="testimonials"
       aria-label="Client Testimonials"
+      className="resp-pad"
       style={{ background: "var(--black)", padding: "6rem 8%" }}
     >
       <div style={{ textAlign: "center", marginBottom: "3.5rem" }}>
@@ -53,6 +54,7 @@ export default function Testimonials() {
       </div>
 
       <div
+        className="resp-3col"
         style={{
           display: "grid",
           gridTemplateColumns: "repeat(3, 1fr)",
@@ -60,7 +62,6 @@ export default function Testimonials() {
           maxWidth: "1300px",
           margin: "0 auto",
         }}
-        className="flex-col lg:grid"
       >
         {testimonials.map(({ quote, name, company }) => (
           <div

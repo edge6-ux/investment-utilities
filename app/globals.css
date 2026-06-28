@@ -34,4 +34,57 @@ body {
   background: var(--white);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* ===================== Responsive helpers =====================
+   These use !important so they override inline grid styles set on
+   the section/grid containers (inline styles otherwise win over
+   plain Tailwind classes). */
+
+/* Two-column section layouts -> single column */
+@media (max-width: 900px) {
+  .resp-2col { grid-template-columns: 1fr !important; gap: 0 !important; }
+  .resp-2col-gap { grid-template-columns: 1fr !important; gap: 2.5rem !important; }
+  .resp-no-border-r { border-right: none !important; }
+}
+
+/* Three/multi-column card grids -> 2 then 1 column */
+@media (max-width: 1024px) {
+  .resp-3col { grid-template-columns: repeat(2, 1fr) !important; }
+}
+@media (max-width: 640px) {
+  .resp-3col { grid-template-columns: 1fr !important; }
+}
+
+/* Two-column card grid -> single column */
+@media (max-width: 768px) {
+  .resp-2col-cards { grid-template-columns: 1fr !important; }
+}
+
+/* Stats strip: 4 -> 2 columns (clean 2x2 dividers) */
+@media (max-width: 768px) {
+  .resp-stats { grid-template-columns: repeat(2, 1fr) !important; }
+  .resp-stats > div { border-right: none !important; border-bottom: 1px solid rgba(0, 0, 0, 0.12); }
+  .resp-stats > div:nth-child(odd) { border-right: 1px solid rgba(0, 0, 0, 0.12) !important; }
+  .resp-stats > div:nth-last-child(-n + 2) { border-bottom: none; }
+}
+
+/* Two-up form rows -> stacked */
+@media (max-width: 600px) {
+  .resp-form-row { grid-template-columns: 1fr !important; }
+}
+
+/* Trim heavy vertical padding on mobile */
+@media (max-width: 768px) {
+  .resp-pad { padding-top: 3.5rem !important; padding-bottom: 3.5rem !important; }
+}
+
+/* Hero adjustments on mobile */
+@media (max-width: 768px) {
+  .resp-hero {
+    height: auto !important;
+    min-height: 78vh !important;
+    padding: 2.5rem 7% !important;
+  }
 }

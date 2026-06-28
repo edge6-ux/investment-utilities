@@ -105,6 +105,7 @@ export default function Pillars() {
     <section
       id="pillars"
       aria-label="What sets us apart"
+      className="resp-pad"
       style={{ background: "var(--off-white)", padding: "6rem 8%" }}
     >
       {/* Header */}
@@ -149,6 +150,7 @@ export default function Pillars() {
 
       {/* 3-column grid */}
       <div
+        className="resp-3col"
         style={{
           display: "grid",
           gridTemplateColumns: "repeat(3, 1fr)",
@@ -156,7 +158,6 @@ export default function Pillars() {
           maxWidth: "1300px",
           margin: "0 auto",
         }}
-        className="sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
       >
         {pillars.map(({ title, body }) => (
           <div

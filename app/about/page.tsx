@@ -16,6 +16,7 @@ export default function AboutPage() {
     <>
       {/* Page Hero */}
       <div
+        className="resp-pad"
         style={{
           background: "var(--black-nav)",
           borderBottom: "3px solid var(--green)",

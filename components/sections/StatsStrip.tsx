@@ -8,6 +8,7 @@ const stats = [
 export default function StatsStrip() {
   return (
     <div
+      className="resp-stats"
       style={{ background: "var(--green)", display: "grid", gridTemplateColumns: "repeat(4, 1fr)" }}
     >
       {stats.map(({ num, label, smallNum }, i) => (

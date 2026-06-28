@@ -5,6 +5,7 @@ export default function Coverage() {
     <section
       id="coverage"
       aria-label="Southeast service area"
+      className="resp-pad"
       style={{ background: "var(--black-nav)", padding: "6rem 8%" }}
     >
       {/* Header */}
@@ -50,6 +51,7 @@ export default function Coverage() {
 
       {/* Two-column: info + map */}
       <div
+        className="resp-2col-gap"
         style={{
           display: "grid",
           gridTemplateColumns: "1fr 1fr",
@@ -58,7 +60,6 @@ export default function Coverage() {
           maxWidth: "1300px",
           margin: "0 auto",
         }}
-        className="flex-col lg:grid"
       >
         {/* Left — info */}
         <div>

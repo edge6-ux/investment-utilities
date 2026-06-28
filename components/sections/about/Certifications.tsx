@@ -92,6 +92,7 @@ export default function Certifications() {
     <section
       id="certs"
       aria-label="Safety and certifications"
+      className="resp-pad"
       style={{ background: "var(--white)", padding: "6rem 8%" }}
     >
       {/* Header */}
@@ -137,6 +138,7 @@ export default function Certifications() {
 
       {/* 3-column grid */}
       <div
+        className="resp-3col"
         style={{
           display: "grid",
           gridTemplateColumns: "repeat(3, 1fr)",
@@ -144,7 +146,6 @@ export default function Certifications() {
           maxWidth: "1300px",
           margin: "0 auto",
         }}
-        className="sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
       >
         {certs.map(({ title, body }) => (
           <div

@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Barlow_Condensed, Open_Sans } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
@@ -58,6 +58,11 @@ export const metadata: Metadata = {
     description:
       "Family-owned utility site work contractor in North Georgia. ROW clearing, vegetation management, storm restoration, high voltage transmission clearing.",
   },
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
 };
 
 export default function RootLayout({

@@ -209,6 +209,7 @@ export default function Services() {
     <section
       id="services"
       aria-label="Our Services"
+      className="resp-pad"
       style={{ background: "var(--white)", padding: "6rem 8%" }}
     >
       <div style={{ textAlign: "center", marginBottom: "3.5rem" }}>
@@ -253,12 +254,12 @@ export default function Services() {
       </div>
 
       <div
+        className="resp-2col-cards"
         style={{
           display: "grid",
           gridTemplateColumns: "repeat(2, 1fr)",
           gap: "1.5rem",
         }}
-        className="sm:grid-cols-1 lg:grid-cols-2"
       >
         {services.map((s) => (
           <ServiceCard key={s.title} title={s.title} desc={s.desc} />

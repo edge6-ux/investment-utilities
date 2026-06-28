@@ -89,15 +89,16 @@ export default function Contact() {
     <section
       id="contact"
       aria-label="Contact and Quote Request"
+      className="resp-2col"
       style={{
         background: "var(--black-nav)",
         display: "grid",
         gridTemplateColumns: "1fr 1fr",
       }}
-      className="flex-col lg:grid"
     >
       {/* Left — contact info */}
       <div
+        className="resp-pad resp-no-border-r"
         style={{
           padding: "6rem 8%",
           borderRight: "1px solid rgba(255,255,255,0.07)",
@@ -181,7 +182,7 @@ export default function Contact() {
       </div>
 
       {/* Right — form */}
-      <div style={{ padding: "6rem 8%" }}>
+      <div className="resp-pad" style={{ padding: "6rem 8%" }}>
         {status === "success" ? (
           <div
             style={{
@@ -199,7 +200,7 @@ export default function Contact() {
         ) : (
           <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: "1.2rem" }}>
             {/* First / Last */}
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem" }}>
+            <div className="resp-form-row" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem" }}>
               <div>
                 <label htmlFor="firstName" style={labelStyle}>First Name *</label>
                 <input
@@ -240,7 +241,7 @@ export default function Contact() {
             </div>
 
             {/* Phone / Email */}
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem" }}>
+            <div className="resp-form-row" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem" }}>
               <div>
                 <label htmlFor="phone" style={labelStyle}>Phone *</label>
                 <input

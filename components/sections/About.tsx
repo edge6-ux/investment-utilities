@@ -31,15 +31,15 @@ export default function About() {
     <section
       id="about"
       aria-label="About Investment Utilities and Infrastructure"
+      className="resp-2col"
       style={{
         display: "grid",
         gridTemplateColumns: "1fr 1fr",
         gap: 0,
       }}
-      className="flex-col lg:grid"
     >
       {/* Left — Light gray */}
-      <div style={{ padding: "6rem 8%", background: "var(--light-gray)" }}>
+      <div className="resp-pad" style={{ padding: "6rem 8%", background: "var(--light-gray)" }}>
         <div
           style={{
             fontFamily: "var(--font-barlow-condensed), sans-serif",
@@ -115,6 +115,7 @@ export default function About() {
 
       {/* Right — Dark panel */}
       <div
+        className="resp-pad"
         style={{
           background: "var(--black-nav)",
           borderTop: "4px solid var(--green)",

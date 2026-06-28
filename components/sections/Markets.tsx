@@ -15,6 +15,7 @@ export default function Markets() {
     <section
       id="markets"
       aria-label="Markets Served"
+      className="resp-pad"
       style={{ background: "var(--white)", padding: "6rem 8%" }}
     >
       <div style={{ textAlign: "center", marginBottom: "3rem" }}>
