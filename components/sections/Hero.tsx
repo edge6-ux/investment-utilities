@@ -24,7 +24,7 @@ export default function Hero() {
         fill
         priority
         quality={100}
-        style={{ objectFit: "cover", objectPosition: "center" }}
+        style={{ objectFit: "cover", objectPosition: "center 80%" }}
       />
 
       {/* Dark overlay so text stays readable */}
