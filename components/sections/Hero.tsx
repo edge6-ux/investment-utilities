@@ -63,6 +63,7 @@ export default function Hero() {
 
       <div style={{ position: "relative", zIndex: 2, maxWidth: "680px" }}>
         <div
+          className="justify-center md:justify-start"
           style={{
             display: "flex",
             alignItems: "center",
@@ -72,6 +73,7 @@ export default function Hero() {
         >
           <span
             aria-hidden="true"
+            className="hidden md:block"
             style={{
               width: "38px",
               height: "2px",
