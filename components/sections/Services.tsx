@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image";
 
 const C = "var(--green)";
 
@@ -124,38 +125,46 @@ const services = [
   {
     title: "Right-of-Way Clearing",
     desc: "Complete ROW establishment and maintenance along power, pipeline, and road corridors — from initial clearing through long-term vegetation programs.",
+    image: "/svc-row-clearing.png",
   },
   {
     title: "Vegetation Management",
     desc: "Scheduled and reactive vegetation management to keep corridors clear, compliant, and maintained to NERC and utility standards.",
+    image: null,
   },
   {
     title: "Site Preparation",
     desc: "Full site prep for utility infrastructure — grading, clearing, grubbing, and erosion control tailored to your project specs.",
+    image: null,
   },
   {
     title: "Wetland Mitigation",
     desc: "Permitted wetland clearing and mitigation executed in coordination with environmental agencies and project managers.",
+    image: null,
   },
   {
     title: "Mat Laying / Line Support",
     desc: "Timber mat installation for heavy equipment access across soft or sensitive terrain — supporting drilling, construction, and restoration.",
+    image: null,
   },
   {
     title: "Storm Restoration",
     desc: "Rapid-response storm debris removal, hazard tree mitigation, and corridor restoration for utilities and municipalities after severe weather.",
+    image: null,
   },
   {
     title: "High Voltage / Transmission",
     desc: "Certified clearing along live transmission corridors. Our crews are electrical-hazard trained for safe proximity to energized lines.",
+    image: null,
   },
   {
     title: "DOT / Road Corridor Work",
     desc: "Right-of-way maintenance and clearing for state and federal road corridors, compliant with DOT specs and traffic control requirements.",
+    image: null,
   },
 ];
 
-function ServiceCard({ title, desc }: { title: string; desc: string }) {
+function ServiceCard({ title, desc, image }: { title: string; desc: string; image: string | null }) {
   const [hovered, setHovered] = useState(false);
 
   return (
@@ -163,43 +172,59 @@ function ServiceCard({ title, desc }: { title: string; desc: string }) {
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
       style={{
-        background: "linear-gradient(135deg, #1a2a10 0%, #243518 40%, #1c2c1a 70%, #2a1a0a 100%)",
+        background: image ? "transparent" : "linear-gradient(135deg, #1a2a10 0%, #243518 40%, #1c2c1a 70%, #2a1a0a 100%)",
         border: "1px solid rgba(255,255,255,0.07)",
         borderBottom: `3px solid ${hovered ? "var(--green)" : "rgba(255,255,255,0.07)"}`,
         padding: "2rem",
         position: "relative",
         overflow: "hidden",
         transition: "border-bottom-color 0.2s",
+        minHeight: image ? "260px" : undefined,
       }}
     >
-      {/* Noise texture overlay */}
+      {/* Photo background */}
+      {image && (
+        <Image
+          src={image}
+          alt=""
+          fill
+          style={{ objectFit: "cover", objectPosition: "center" }}
+        />
+      )}
+
+      {/* Dark overlay — deeper when photo is present */}
       <div
         aria-hidden="true"
         style={{
           position: "absolute",
           inset: 0,
-          backgroundImage:
-            "url(\"data:image/svg+xml,%3Csvg width='4' height='4' viewBox='0 0 4 4' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='1' height='1' fill='%23ffffff' fill-opacity='0.03'/%3E%3C/svg%3E\")",
+          background: image
+            ? "linear-gradient(to top, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.55) 60%, rgba(0,0,0,0.35) 100%)"
+            : "url(\"data:image/svg+xml,%3Csvg width='4' height='4' viewBox='0 0 4 4' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='1' height='1' fill='%23ffffff' fill-opacity='0.03'/%3E%3C/svg%3E\")",
           pointerEvents: "none",
+          zIndex: 1,
         }}
       />
-      <div style={{ width: "48px", height: "48px", marginBottom: "1.2rem", position: "relative" }}>
-        {icons[title]}
+
+      {/* Card content */}
+      <div style={{ position: "relative", zIndex: 2 }}>
+        <div style={{ width: "48px", height: "48px", marginBottom: "1.2rem" }}>
+          {icons[title]}
+        </div>
+        <h3
+          style={{
+            fontFamily: "var(--font-barlow-condensed), sans-serif",
+            fontSize: "1.15rem",
+            fontWeight: 700,
+            color: "var(--white)",
+            marginBottom: "0.65rem",
+            letterSpacing: "0.02em",
+          }}
+        >
+          {title}
+        </h3>
+        <p style={{ fontSize: "0.85rem", color: "rgba(255,255,255,0.65)", lineHeight: 1.75 }}>{desc}</p>
       </div>
-      <h3
-        style={{
-          fontFamily: "var(--font-barlow-condensed), sans-serif",
-          fontSize: "1.15rem",
-          fontWeight: 700,
-          color: "var(--white)",
-          marginBottom: "0.65rem",
-          letterSpacing: "0.02em",
-          position: "relative",
-        }}
-      >
-        {title}
-      </h3>
-      <p style={{ fontSize: "0.85rem", color: "rgba(255,255,255,0.65)", lineHeight: 1.75, position: "relative" }}>{desc}</p>
     </div>
   );
 }
@@ -262,7 +287,7 @@ export default function Services() {
         }}
       >
         {services.map((s) => (
-          <ServiceCard key={s.title} title={s.title} desc={s.desc} />
+          <ServiceCard key={s.title} title={s.title} desc={s.desc} image={s.image} />
         ))}
       </div>
     </section>
