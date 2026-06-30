@@ -1,5 +1,3 @@
-"use client";
-
 import Image from "next/image";
 
 export default function Hero() {
@@ -17,23 +15,47 @@ export default function Hero() {
         overflow: "hidden",
       }}
     >
-      {/* Background image via Next.js Image for optimization */}
+      {/* Desktop background (landscape ROW clearing) */}
       <Image
         src="/hero-bg.png"
         alt=""
         fill
         priority
         quality={100}
+        className="hidden md:block"
         style={{ objectFit: "cover", objectPosition: "center 80%" }}
       />
 
-      {/* Dark overlay so text stays readable */}
+      {/* Mobile background (portrait transmission tower) */}
+      <Image
+        src="/hero-bg-mobile.png"
+        alt=""
+        fill
+        priority
+        quality={90}
+        className="block md:hidden"
+        style={{ objectFit: "cover", objectPosition: "center 30%" }}
+      />
+
+      {/* Dark overlay — desktop fades left-to-right; mobile fades bottom-to-top */}
       <div
         aria-hidden="true"
+        className="hidden md:block"
         style={{
           position: "absolute",
           inset: 0,
           background: "linear-gradient(to right, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.45) 60%, rgba(0,0,0,0.2) 100%)",
+          pointerEvents: "none",
+          zIndex: 1,
+        }}
+      />
+      <div
+        aria-hidden="true"
+        className="block md:hidden"
+        style={{
+          position: "absolute",
+          inset: 0,
+          background: "linear-gradient(to top, rgba(0,0,0,0.80) 0%, rgba(0,0,0,0.55) 50%, rgba(0,0,0,0.25) 100%)",
           pointerEvents: "none",
           zIndex: 1,
         }}
