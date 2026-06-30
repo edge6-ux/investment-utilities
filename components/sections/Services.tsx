@@ -207,10 +207,7 @@ function ServiceCard({ title, desc, image }: { title: string; desc: string; imag
       />
 
       {/* Card content */}
-      <div style={{ position: "relative", zIndex: 2 }}>
-        <div style={{ width: "48px", height: "48px", marginBottom: "1.2rem" }}>
-          {icons[title]}
-        </div>
+      <div style={{ position: "relative", zIndex: 2, paddingTop: "0.5rem" }}>
         <h3
           style={{
             fontFamily: "var(--font-barlow-condensed), sans-serif",
