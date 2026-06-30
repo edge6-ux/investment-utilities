@@ -96,34 +96,8 @@ export default function Hero() {
           Family-Owned · North Georgia &amp; Southeast · 24/7 Emergency Response
         </p>
 
-        <a
-          href="#contact"
-          style={{
-            display: "inline-flex",
-            alignItems: "center",
-            gap: "0.7rem",
-            background: "transparent",
-            border: "2px solid var(--green)",
-            color: "var(--white)",
-            fontFamily: "var(--font-barlow-condensed), sans-serif",
-            fontSize: "0.95rem",
-            fontWeight: 700,
-            letterSpacing: "0.1em",
-            textTransform: "uppercase",
-            textDecoration: "none",
-            padding: "0.85rem 1.8rem",
-            transition: "background 0.2s, color 0.2s",
-          }}
-          onMouseEnter={(e) => {
-            (e.currentTarget as HTMLAnchorElement).style.background = "var(--green)";
-            (e.currentTarget as HTMLAnchorElement).style.color = "var(--black-nav)";
-          }}
-          onMouseLeave={(e) => {
-            (e.currentTarget as HTMLAnchorElement).style.background = "transparent";
-            (e.currentTarget as HTMLAnchorElement).style.color = "var(--white)";
-          }}
-        >
-          Request a Free Quote <span style={{ fontSize: "1.1rem" }}>↗</span>
+        <a href="#contact" className="hero-btn">
+          Request a Free Quote
         </a>
       </div>
     </section>

@@ -88,3 +88,25 @@ body {
     padding: 2.5rem 7% !important;
   }
 }
+
+/* Hero CTA button — green glow on hover */
+.hero-btn {
+  display: inline-flex;
+  align-items: center;
+  background: rgba(95, 214, 30, 0.08);
+  border: 2px solid var(--green);
+  color: var(--white);
+  font-family: var(--font-barlow-condensed), sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0.85rem 1.8rem;
+  transition: background 0.25s ease, box-shadow 0.25s ease, color 0.25s ease;
+}
+.hero-btn:hover {
+  background: rgba(95, 214, 30, 0.22);
+  box-shadow: 0 0 22px rgba(95, 214, 30, 0.45), 0 0 6px rgba(95, 214, 30, 0.25);
+  color: var(--white);
+}
