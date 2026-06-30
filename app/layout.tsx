@@ -51,12 +51,21 @@ export const metadata: Metadata = {
     description:
       "Family-owned utility site work contractor serving North Georgia and the Southeast. ROW clearing, vegetation management, storm restoration, and more. (770) 529-7181.",
     locale: "en_US",
+    images: [
+      {
+        url: "/IUI_logo.jpg",
+        width: 1402,
+        height: 817,
+        alt: "Investment Utilities & Infrastructure",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Investment Utilities & Infrastructure | Utility Site Work",
     description:
       "Family-owned utility site work contractor in North Georgia. ROW clearing, vegetation management, storm restoration, high voltage transmission clearing.",
+    images: ["/IUI_logo.jpg"],
   },
 };
 
