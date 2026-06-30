@@ -130,37 +130,37 @@ const services = [
   {
     title: "Vegetation Management",
     desc: "Scheduled and reactive vegetation management to keep corridors clear, compliant, and maintained to NERC and utility standards.",
-    image: null,
+    image: "/svc-vegetation.png",
   },
   {
     title: "Site Preparation",
     desc: "Full site prep for utility infrastructure — grading, clearing, grubbing, and erosion control tailored to your project specs.",
-    image: null,
+    image: "/svc-site-prep.png",
   },
   {
     title: "Wetland Mitigation",
     desc: "Permitted wetland clearing and mitigation executed in coordination with environmental agencies and project managers.",
-    image: null,
+    image: "/svc-wetland.png",
   },
   {
     title: "Mat Laying / Line Support",
     desc: "Timber mat installation for heavy equipment access across soft or sensitive terrain — supporting drilling, construction, and restoration.",
-    image: null,
+    image: "/svc-mat-laying.png",
   },
   {
     title: "Storm Restoration",
     desc: "Rapid-response storm debris removal, hazard tree mitigation, and corridor restoration for utilities and municipalities after severe weather.",
-    image: null,
+    image: "/svc-storm.png",
   },
   {
     title: "High Voltage / Transmission",
     desc: "Certified clearing along live transmission corridors. Our crews are electrical-hazard trained for safe proximity to energized lines.",
-    image: null,
+    image: "/svc-high-voltage.png",
   },
   {
     title: "DOT / Road Corridor Work",
     desc: "Right-of-way maintenance and clearing for state and federal road corridors, compliant with DOT specs and traffic control requirements.",
-    image: null,
+    image: "/svc-dot.png",
   },
 ];
 
