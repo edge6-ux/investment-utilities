@@ -40,6 +40,36 @@ export default function Hero() {
       />
 
       <div style={{ position: "relative", zIndex: 2, maxWidth: "680px" }}>
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            gap: "0.85rem",
+            marginBottom: "1.5rem",
+          }}
+        >
+          <span
+            aria-hidden="true"
+            style={{
+              width: "38px",
+              height: "2px",
+              background: "var(--green)",
+              flexShrink: 0,
+            }}
+          />
+          <span
+            style={{
+              fontFamily: "var(--font-barlow-condensed), sans-serif",
+              fontSize: "clamp(0.95rem, 1.6vw, 1.2rem)",
+              fontWeight: 600,
+              letterSpacing: "0.18em",
+              textTransform: "uppercase",
+              color: "rgba(255,255,255,0.92)",
+            }}
+          >
+            Investment Utilities <span style={{ color: "var(--green)" }}>&amp;</span> Infrastructure
+          </span>
+        </div>
         <h1
           style={{
             fontFamily: "var(--font-barlow-condensed), sans-serif",
