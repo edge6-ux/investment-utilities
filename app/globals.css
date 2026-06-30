@@ -86,6 +86,8 @@ body {
     height: auto !important;
     min-height: 78vh !important;
     padding: 2.5rem 7% !important;
+    align-items: flex-start !important;
+    padding-top: 3.5rem !important;
   }
 }
 
