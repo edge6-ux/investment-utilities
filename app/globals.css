@@ -122,3 +122,9 @@ section[id] {
   box-shadow: 0 0 22px rgba(95, 214, 30, 0.45), 0 0 6px rgba(95, 214, 30, 0.25);
   color: var(--white);
 }
+
+/* Contact form selects — options need dark text on light dropdown background */
+.form-select option {
+  background-color: var(--white);
+  color: var(--text-dark);
+}

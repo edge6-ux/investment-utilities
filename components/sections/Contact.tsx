@@ -277,6 +277,7 @@ export default function Contact() {
                 required
                 value={form.service}
                 onChange={handleChange}
+                className="form-select"
                 style={{ ...inputStyle, appearance: "none" }}
               >
                 <option value="">Select a Service</option>
@@ -295,6 +296,7 @@ export default function Contact() {
                 required
                 value={form.state}
                 onChange={handleChange}
+                className="form-select"
                 style={{ ...inputStyle, appearance: "none" }}
               >
                 <option value="">Select a State</option>
