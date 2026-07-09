@@ -117,20 +117,19 @@ body {
     --navbar-height: 75px;
   }
   .hero-viewport {
-    height: calc(100vh - var(--navbar-height));
-    min-height: 0;
+    height: auto;
+    min-height: calc(100vh - var(--navbar-height));
   }
   .hero-viewport .resp-hero {
-    flex: 1 1 auto;
-    min-height: 0;
+    flex: none;
+    min-height: 48vh;
   }
   .resp-hero {
     height: auto !important;
-    min-height: 0 !important;
+    min-height: 48vh !important;
     padding: 2rem 7% !important;
     align-items: flex-start !important;
-    padding-top: 2rem !important;
-    overflow: hidden;
+    padding-top: 2.5rem !important;
   }
 }
 
