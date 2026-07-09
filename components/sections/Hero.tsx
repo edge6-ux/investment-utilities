@@ -5,13 +5,12 @@ export default function Hero() {
     <section
       id="home"
       aria-label="Hero"
-      className="resp-hero"
+      className="resp-hero hero-section"
       style={{
         display: "flex",
         alignItems: "center",
-        padding: "3rem 8%",
+        padding: "2rem 8%",
         position: "relative",
-        overflow: "hidden",
         flex: "1 1 auto",
         minHeight: 0,
       }}
@@ -62,7 +61,7 @@ export default function Hero() {
         }}
       />
 
-      <div style={{ position: "relative", zIndex: 2, maxWidth: "680px" }}>
+      <div className="hero-content" style={{ position: "relative", zIndex: 2, maxWidth: "680px" }}>
         <div
           className="justify-center md:justify-start"
           style={{
@@ -101,25 +100,12 @@ export default function Hero() {
             fontSize: "clamp(2.8rem, 6vw, 5rem)",
             fontWeight: 700,
             lineHeight: 1.0,
-            marginBottom: "1.2rem",
+            marginBottom: "1.75rem",
           }}
         >
           <span style={{ color: "var(--green)", display: "block" }}>Utility Site Work</span>
           <span style={{ color: "var(--white)", display: "block" }}>Done Right.</span>
         </h1>
-
-        <p
-          style={{
-            fontSize: "0.88rem",
-            fontWeight: 600,
-            letterSpacing: "0.14em",
-            textTransform: "uppercase",
-            color: "rgba(255,255,255,0.65)",
-            marginBottom: "2rem",
-          }}
-        >
-          Family-Owned · North Georgia &amp; Southeast · 24/7 Emergency Response
-        </p>
 
         <a href="#contact" className="hero-btn">
           Request a Free Quote

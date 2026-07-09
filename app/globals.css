@@ -98,25 +98,39 @@ body {
   flex-shrink: 0;
 }
 
+/* Desktop — fit hero, icon strip, and stats bar above the fold */
+@media (min-width: 769px) {
+  .hero-viewport .resp-hero {
+    align-items: flex-start !important;
+    padding-top: 2rem !important;
+    padding-bottom: 1.5rem !important;
+    overflow: hidden;
+  }
+  .hero-content {
+    padding-top: 0;
+  }
+}
+
 /* Hero adjustments on mobile */
 @media (max-width: 768px) {
   :root {
     --navbar-height: 75px;
   }
   .hero-viewport {
-    height: auto;
-    min-height: calc(100vh - var(--navbar-height));
+    height: calc(100vh - var(--navbar-height));
+    min-height: 0;
   }
   .hero-viewport .resp-hero {
-    flex: none;
-    min-height: 48vh;
+    flex: 1 1 auto;
+    min-height: 0;
   }
   .resp-hero {
     height: auto !important;
-    min-height: 48vh !important;
+    min-height: 0 !important;
     padding: 2rem 7% !important;
     align-items: flex-start !important;
-    padding-top: 2.5rem !important;
+    padding-top: 2rem !important;
+    overflow: hidden;
   }
 }
 
