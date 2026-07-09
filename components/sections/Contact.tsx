@@ -6,28 +6,19 @@ const serviceOptions = [
   "Right-of-Way Clearing",
   "Vegetation Management",
   "Site Preparation",
-  "Wetland Mitigation",
+  "Full-Spectrum New Construction Site Prep",
   "Storm Restoration",
   "High Voltage / Transmission",
   "Solar Site Work",
   "DOT / Road Corridor Work",
-  "Mat Laying / Line Support",
+  "Fiber and Utility Trenching",
   "Other",
-];
-
-const stateOptions = [
-  "Georgia",
-  "Florida",
-  "Tennessee",
-  "North Carolina",
-  "South Carolina",
-  "Alabama",
 ];
 
 const contactDetails = [
   { label: "Phone", value: "(770) 529-7181", href: "tel:+17705297181" },
   { label: "Email", value: "info@investmentutilities.com", href: "mailto:info@investmentutilities.com" },
-  { label: "Based In", value: "North Georgia — Serving the Southeast", href: null },
+  { label: "Based In", value: "North Georgia — Serving Georgia", href: null },
   { label: "Availability", value: "24/7 for Emergency Response", href: null },
 ];
 
@@ -59,7 +50,7 @@ export default function Contact() {
     phone: "",
     email: "",
     service: "",
-    state: "",
+    city: "",
     details: "",
   });
   const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
@@ -287,23 +278,19 @@ export default function Contact() {
               </select>
             </div>
 
-            {/* Project State */}
+            {/* Project City */}
             <div>
-              <label htmlFor="state" style={labelStyle}>Project State *</label>
-              <select
-                id="state"
-                name="state"
+              <label htmlFor="city" style={labelStyle}>Project City *</label>
+              <input
+                id="city"
+                name="city"
+                type="text"
                 required
-                value={form.state}
+                value={form.city}
                 onChange={handleChange}
-                className="form-select"
-                style={{ ...inputStyle, appearance: "none" }}
-              >
-                <option value="">Select a State</option>
-                {stateOptions.map((s) => (
-                  <option key={s} value={s}>{s}</option>
-                ))}
-              </select>
+                placeholder="e.g. Gainesville"
+                style={inputStyle}
+              />
             </div>
 
             {/* Details */}

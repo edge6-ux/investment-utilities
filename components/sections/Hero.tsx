@@ -7,12 +7,13 @@ export default function Hero() {
       aria-label="Hero"
       className="resp-hero"
       style={{
-        height: "calc(100vh - 230px)",
         display: "flex",
         alignItems: "center",
-        padding: "4rem 8%",
+        padding: "3rem 8%",
         position: "relative",
         overflow: "hidden",
+        flex: "1 1 auto",
+        minHeight: 0,
       }}
     >
       {/* Desktop background (landscape ROW clearing) */}
@@ -114,7 +115,7 @@ export default function Hero() {
             letterSpacing: "0.14em",
             textTransform: "uppercase",
             color: "rgba(255,255,255,0.65)",
-            marginBottom: "2.5rem",
+            marginBottom: "2rem",
           }}
         >
           Family-Owned · North Georgia &amp; Southeast · 24/7 Emergency Response

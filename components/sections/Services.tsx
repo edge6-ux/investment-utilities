@@ -138,14 +138,14 @@ const services = [
     image: "/svc-site-prep.png",
   },
   {
-    title: "Wetland Mitigation",
-    desc: "Permitted wetland clearing and mitigation executed in coordination with environmental agencies and project managers.",
-    image: "/svc-wetland.png",
+    title: "Full-Spectrum New Construction Site Prep",
+    desc: "From initial land clearing to final grading, we handle the full scope of new construction site preparation for utility infrastructure projects — including clearing, grubbing, grading, erosion control, and drainage. Built to spec, on schedule.",
+    image: "/svc-new-construction-prep.png",
   },
   {
-    title: "Mat Laying / Line Support",
-    desc: "Timber mat installation for heavy equipment access across soft or sensitive terrain — supporting drilling, construction, and restoration.",
-    image: "/svc-mat-laying.png",
+    title: "Fiber and Utility Trenching",
+    desc: "Clean, accurate trenching for fiber optic, electrical, water, and gas lines. We follow proper depth and safety specs for every utility type, ensuring reliable installation with minimal site disruption.",
+    image: "/svc-fiber-trenching.png",
   },
   {
     title: "Storm Restoration",

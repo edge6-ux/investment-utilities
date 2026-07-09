@@ -1,4 +1,5 @@
 import Hero from "@/components/sections/Hero";
+import HeroFeatures from "@/components/sections/HeroFeatures";
 import StatsStrip from "@/components/sections/StatsStrip";
 import About from "@/components/sections/About";
 import Services from "@/components/sections/Services";
@@ -10,8 +11,11 @@ import Contact from "@/components/sections/Contact";
 export default function HomePage() {
   return (
     <>
-      <Hero />
-      <StatsStrip />
+      <div className="hero-viewport">
+        <Hero />
+        <HeroFeatures />
+        <StatsStrip />
+      </div>
       <Services />
       <About />
       <Markets />

@@ -1,6 +1,6 @@
 const stats = [
   { num: "Family", label: "Owned & Operated", smallNum: true },
-  { num: "6", label: "States Covered", smallNum: false },
+  { num: "Serving", label: "Georgia", smallNum: true },
   { num: "24/7", label: "Emergency Response", smallNum: false },
   { num: "OSHA", label: "Certified Crews", smallNum: true },
 ];

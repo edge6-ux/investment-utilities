@@ -146,7 +146,7 @@ export default function Footer() {
         <p
           style={{ color: "var(--mid-gray)", fontSize: "0.75rem", textAlign: "center", letterSpacing: "0.04em" }}
         >
-          © 2025 Investment Utilities &amp; Infrastructure. All Rights Reserved.
+          © 2026 Investment Utilities &amp; Infrastructure. All Rights Reserved.
           &nbsp;|&nbsp;
           Family-Owned · Community-Focused · Southeast USA
         </p>

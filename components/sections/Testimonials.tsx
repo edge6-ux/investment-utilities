@@ -7,7 +7,7 @@ const testimonials = [
   },
   {
     quote:
-      "When the storm hit, we needed crews mobilized fast. Investment U&I had boots on the ground within 24 hours and worked through the weekend to restore our corridor. Exactly what you need in a crisis.",
+      "When the storm hit, we needed crews mobilized fast. IUI had boots on the ground within 24 hours and worked through the weekend to restore our corridor. Exactly what you need in a crisis.",
     name: "Operations Director",
     company: "Municipal Utility District",
   },

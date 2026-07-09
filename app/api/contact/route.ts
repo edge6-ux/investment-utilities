@@ -5,9 +5,9 @@ export async function POST(req: NextRequest) {
   const resend = new Resend(process.env.RESEND_API_KEY);
   try {
     const body = await req.json();
-    const { firstName, lastName, company, phone, email, service, state, details } = body;
+    const { firstName, lastName, company, phone, email, service, city, details } = body;
 
-    if (!firstName || !lastName || !phone || !email || !service || !state) {
+    if (!firstName || !lastName || !phone || !email || !service || !city) {
       return NextResponse.json({ error: "Missing required fields." }, { status: 400 });
     }
 
@@ -20,7 +20,7 @@ export async function POST(req: NextRequest) {
       from: "Investment Utilities Website <onboarding@resend.dev>",
       to,
       replyTo: email,
-      subject: `New Quote Request — ${service} (${state})`,
+      subject: `New Quote Request — ${service} (${city}, GA)`,
       text: [
         "NEW QUOTE REQUEST",
         "─────────────────────────────",
@@ -29,7 +29,7 @@ export async function POST(req: NextRequest) {
         `Phone:    ${phone}`,
         `Email:    ${email}`,
         `Service:  ${service}`,
-        `State:    ${state}`,
+        `City:     ${city}, GA`,
         "",
         "Project Details:",
         details || "None provided.",

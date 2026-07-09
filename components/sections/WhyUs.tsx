@@ -154,7 +154,7 @@ export default function WhyUs() {
               marginBottom: "2rem",
             }}
           >
-            Every Investment U&amp;I crew member arrives trained, certified, and accountable. Our
+            Every IUI crew member arrives trained, certified, and accountable. Our
             safety culture isn&apos;t a checkbox — it&apos;s the foundation we&apos;re built on.
           </p>
 
