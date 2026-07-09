@@ -134,6 +134,14 @@ body {
   }
 }
 
+/* Facebook Follow button — align in dark navbar */
+.facebook-widget {
+  line-height: 0;
+}
+.facebook-widget .fb_iframe_widget {
+  vertical-align: middle;
+}
+
 /* Anchor scroll offset — compensates for sticky navbar height */
 section[id] {
   scroll-margin-top: 130px;

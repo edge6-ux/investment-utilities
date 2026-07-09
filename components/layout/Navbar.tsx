@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import FacebookWidget from "@/components/layout/FacebookWidget";
 
 const navLinks = [
   { label: "Home", href: "/" },
@@ -66,19 +67,9 @@ export default function Navbar() {
         style={{ background: "var(--black-nav)", height: "46px" }}
         className="hidden w-full items-center md:flex"
       >
-        {/* Left — home icon + contact */}
+        {/* Left — Facebook widget + contact */}
         <div className="flex flex-1 items-center pl-[5%]">
-          {/* Home icon */}
-          <Link
-            href="/"
-            aria-label="Home"
-            className="flex items-center transition-colors duration-200 hover:text-[var(--green)]"
-            style={{ color: "rgba(255,255,255,0.75)" }}
-          >
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-              <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
-            </svg>
-          </Link>
+          <FacebookWidget />
           <div style={{ width: "1px", height: "20px", background: "rgba(255,255,255,0.12)", margin: "0 1.1rem" }} />
           <a
             href="tel:+17705297181"
