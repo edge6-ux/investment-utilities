@@ -2,8 +2,10 @@
 
 import Script from "next/script";
 import { useEffect, useRef, useState } from "react";
+import { FACEBOOK_PAGE_URL as DEFAULT_FACEBOOK_PAGE_URL } from "@/lib/site-config";
 
-const FACEBOOK_PAGE_URL = process.env.NEXT_PUBLIC_FACEBOOK_PAGE_URL?.trim() ?? "";
+const FACEBOOK_PAGE_URL =
+  process.env.NEXT_PUBLIC_FACEBOOK_PAGE_URL?.trim() || DEFAULT_FACEBOOK_PAGE_URL;
 
 declare global {
   interface Window {
