@@ -18,6 +18,17 @@ const openSans = Open_Sans({
   display: "swap",
 });
 
+const siteUrl = "https://www.investmentutilities.com";
+
+const ogImage = {
+  url: "/IUI_logo.jpg",
+  secureUrl: `${siteUrl}/IUI_logo.jpg`,
+  width: 1402,
+  height: 817,
+  alt: "Investment Utilities & Infrastructure",
+  type: "image/jpeg",
+};
+
 export const metadata: Metadata = {
   title: {
     default: "Investment Utilities & Infrastructure | Utility Site Work | North Georgia & Southeast",
@@ -41,31 +52,29 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Investment Utilities & Infrastructure" }],
   robots: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-  metadataBase: new URL("https://www.investmentutilities.com"),
+  metadataBase: new URL(siteUrl),
   alternates: { canonical: "/" },
+  icons: {
+    icon: [{ url: "/IUI_logo.jpg", type: "image/jpeg" }],
+    shortcut: [{ url: "/IUI_logo.jpg", type: "image/jpeg" }],
+    apple: [{ url: "/IUI_logo.jpg", type: "image/jpeg" }],
+  },
   openGraph: {
     type: "website",
-    url: "https://www.investmentutilities.com/",
+    url: `${siteUrl}/`,
     siteName: "Investment Utilities & Infrastructure",
     title: "Investment Utilities & Infrastructure | Utility Site Work | North Georgia",
     description:
       "Family-owned utility site work contractor serving North Georgia and the Southeast. ROW clearing, vegetation management, storm restoration, and more. (770) 529-7181.",
     locale: "en_US",
-    images: [
-      {
-        url: "/IUI_logo.jpg",
-        width: 1402,
-        height: 817,
-        alt: "Investment Utilities & Infrastructure",
-      },
-    ],
+    images: [ogImage],
   },
   twitter: {
     card: "summary_large_image",
     title: "Investment Utilities & Infrastructure | Utility Site Work",
     description:
       "Family-owned utility site work contractor in North Georgia. ROW clearing, vegetation management, storm restoration, high voltage transmission clearing.",
-    images: ["/IUI_logo.jpg"],
+    images: [ogImage],
   },
 };
 

@@ -4,7 +4,7 @@ const features = [
   { label: "Right-of-Way Clearing", src: "/row-clearing.png", size: 45 },
   { label: "Vegetation Management", src: "/vegetation.png", size: 45 },
   { label: "Site Preparation", src: "/site-prep.png", size: 45, scale: 1.75 },
-  { label: "Storm Restoration", src: "/storm.png", size: 45, scale: 1.6 },
+  { label: "Storm Restoration", src: "/storm.png", size: 45, scale: 1.4 },
 ];
 
 export default function HeroFeatures() {
