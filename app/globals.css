@@ -187,18 +187,19 @@ section[id] {
 /* Hero features icon strip */
 .hero-features-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1rem;
-  max-width: 960px;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 0.5rem;
+  max-width: 1120px;
   margin: 0 auto;
 }
 .hero-feature-item {
   text-align: center;
+  min-width: 0;
 }
 .hero-feature-icon-circle {
-  width: 80px;
-  height: 80px;
-  margin: 0 auto 0.35rem;
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 0.2rem;
   border-radius: 50%;
   border: 2px solid var(--green);
   display: flex;
@@ -206,13 +207,18 @@ section[id] {
   justify-content: center;
   overflow: hidden;
 }
+.hero-feature-icon-image {
+  width: 36px !important;
+  height: 36px !important;
+}
 .hero-feature-label {
   font-family: var(--font-barlow-condensed), sans-serif;
-  font-size: 0.78rem;
+  font-size: 0.65rem;
   font-weight: 700;
   color: var(--text-dark);
-  line-height: 1.25;
-  letter-spacing: 0.02em;
+  line-height: 1.15;
+  letter-spacing: 0.01em;
+  padding: 0 0.15rem;
 }
 
 /* Hero features — compact 4-across on mobile */
@@ -221,9 +227,12 @@ section[id] {
     padding: 0.65rem 4% !important;
   }
   .resp-hero-features-grid {
-    grid-template-columns: repeat(4, 1fr) !important;
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
     gap: 0.4rem !important;
     max-width: 100% !important;
+  }
+  .hero-feature-item-desktop-only {
+    display: none !important;
   }
   .hero-feature-icon-circle {
     width: 54px !important;
