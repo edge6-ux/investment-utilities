@@ -1,17 +1,7 @@
-"use client";
-
-import Script from "next/script";
-import { useEffect, useRef, useState } from "react";
 import { FACEBOOK_PAGE_URL as DEFAULT_FACEBOOK_PAGE_URL } from "@/lib/site-config";
 
 const FACEBOOK_PAGE_URL =
   process.env.NEXT_PUBLIC_FACEBOOK_PAGE_URL?.trim() || DEFAULT_FACEBOOK_PAGE_URL;
-
-declare global {
-  interface Window {
-    FB?: { XFBML: { parse: (node?: HTMLElement | null) => void } };
-  }
-}
 
 function FacebookIcon({ size = 14 }: { size?: number }) {
   return (
@@ -21,12 +11,42 @@ function FacebookIcon({ size = 14 }: { size?: number }) {
   );
 }
 
-function FacebookPlaceholder() {
+export default function FacebookWidget() {
+  if (!FACEBOOK_PAGE_URL) {
+    return (
+      <span
+        aria-label="Facebook — coming soon"
+        title="Facebook coming soon"
+        className="facebook-widget-placeholder"
+        style={{
+          display: "inline-flex",
+          alignItems: "center",
+          gap: "0.35rem",
+          padding: "0.15rem 0.55rem",
+          borderRadius: "3px",
+          background: "rgba(255,255,255,0.08)",
+          border: "1px solid rgba(255,255,255,0.15)",
+          fontSize: "0.72rem",
+          fontWeight: 600,
+          color: "rgba(255,255,255,0.75)",
+          lineHeight: 1,
+          cursor: "default",
+        }}
+      >
+        <FacebookIcon />
+        <span>Follow</span>
+      </span>
+    );
+  }
+
   return (
-    <span
-      aria-label="Facebook — coming soon"
-      title="Facebook coming soon"
-      className="facebook-widget-placeholder"
+    <a
+      href={FACEBOOK_PAGE_URL}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Follow Investment Utilities & Infrastructure on Facebook"
+      title="Follow us on Facebook"
+      className="facebook-widget-link transition-colors duration-200 hover:border-[var(--green)] hover:text-[var(--green)]"
       style={{
         display: "inline-flex",
         alignItems: "center",
@@ -39,45 +59,11 @@ function FacebookPlaceholder() {
         fontWeight: 600,
         color: "rgba(255,255,255,0.75)",
         lineHeight: 1,
-        cursor: "default",
+        textDecoration: "none",
       }}
     >
       <FacebookIcon />
       <span>Follow</span>
-    </span>
-  );
-}
-
-export default function FacebookWidget() {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const [sdkReady, setSdkReady] = useState(false);
-
-  useEffect(() => {
-    if (sdkReady && FACEBOOK_PAGE_URL && window.FB) {
-      window.FB.XFBML.parse(containerRef.current);
-    }
-  }, [sdkReady]);
-
-  if (!FACEBOOK_PAGE_URL) {
-    return <FacebookPlaceholder />;
-  }
-
-  return (
-    <>
-      <Script
-        src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v21.0"
-        strategy="lazyOnload"
-        onLoad={() => setSdkReady(true)}
-      />
-      <div ref={containerRef} className="facebook-widget flex items-center">
-        <div
-          className="fb-follow"
-          data-href={FACEBOOK_PAGE_URL}
-          data-layout="button"
-          data-size="small"
-          data-show-faces="false"
-        />
-      </div>
-    </>
+    </a>
   );
 }
