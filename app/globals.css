@@ -197,8 +197,8 @@ section[id] {
   min-width: 0;
 }
 .hero-feature-icon-circle {
-  width: 88px;
-  height: 88px;
+  width: 100px;
+  height: 100px;
   margin: 0 auto 0.2rem;
   border-radius: 50%;
   border: 2px solid var(--green);
@@ -208,12 +208,12 @@ section[id] {
   overflow: hidden;
 }
 .hero-feature-icon-image {
-  width: 50px !important;
-  height: 50px !important;
+  width: 58px !important;
+  height: 58px !important;
 }
 .hero-feature-label {
   font-family: var(--font-barlow-condensed), sans-serif;
-  font-size: 0.88rem;
+  font-size: 1rem;
   font-weight: 700;
   color: var(--text-dark);
   line-height: 1.15;
